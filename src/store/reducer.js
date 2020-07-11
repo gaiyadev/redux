@@ -41,7 +41,7 @@ const reducer = (state = initialState, action) => {
                 results: newArr
             };
     }
-    //default:
+    // default:
     return state;
 };
 
