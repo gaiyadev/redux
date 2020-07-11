@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.INCREMENT:
             return {
                 ...state, //1
-                counter: counter + action.val
+                counter: state.counter + action.val
             };
         case actionTypes.DECREMENT:
             const newState = Object.assign({}, state); //2 1 And 2 are the same
@@ -19,12 +19,12 @@ const reducer = (state = initialState, action) => {
         case actionTypes.ADD_FIVE:
             return {
                 ...state,
-                counter: counter + action.val
+                counter: state.counter + action.val
             };
         case actionTypes.SUBTRACT_FIVE:
             return {
                 ...state,
-                counter: counter - action.val
+                counter: state.counter - action.val
             };
         case actionTypes.STORE_RESULT:
             return {
